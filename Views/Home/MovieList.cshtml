@@ -16,7 +16,7 @@
         <tbody>
             @foreach (Assignment3.Models.Movie m in Model)
             {
-                @if(m.Title != "Independence Day")
+                @if(m.Title != "Independence Day") //Keeps Independence Day from displaying in the list.
                 {
                     <tr>
                         <td>@m.Category</td>
