@@ -9,7 +9,7 @@ namespace Assignment3.Models
     public class Movie
     {
         [Required]
-        public string Category { get; set; }
+        public string Category { get; set; } // Created getters and setters
 
         [Required]
         public string Title { get; set; }

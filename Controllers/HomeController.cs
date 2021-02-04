@@ -44,7 +44,7 @@ namespace Assignment3.Controllers
             if (ModelState.IsValid)// This ensures that invalid inputs don't get added to the list #Notcoveredinthevideos!
             {
                 Models.MovieList.AddMovie(movie);
-                return View("Confirmation", movie);
+                return View("Confirmation", movie); // passed in the model to let user know that the movie was added successfully
             }
             
             return View();
