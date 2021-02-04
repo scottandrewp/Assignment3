@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Joel Hilton Movie Collection";
+}
+
+<div>
+    <h2>Here is the list of the best movies of all time!</h2>
+
+    <table>
+        <thead>
+            <tr><th>Category</th><th>Title</th><th>Year</th><th>Director</th><th>Rating</th><th>Edited</th><th> Lent To:</th><th>Notes</th></tr>
+        </thead>
+
+        <tbody>
+            @foreach (Assignment3.Models.Movie m in Model)
+            {
+                @if(m.Title != "Independence Day")
+                {
+                    <tr>
+                        <td>@m.Category</td>
+                        <td>@m.Title</td>
+                        <td>@m.Year</td>
+                        <td>@m.Director</td>
+                        <td>@m.Rating</td>
+                        <td>@m.Edited</td>
+                        <td>@m.LentTo</td>
+                        <td>@m.Notes</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

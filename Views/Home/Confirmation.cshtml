@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Movie Added Successfully!";
+}
+
+@model Assignment3.Models.Movie;
+<div>
+    <h2>You successully added @Model.Title to the movie collection!</h2>
+    <br />
+    <br />
+    <a asp-controller="Home" asp-action="AddMovie" >Add Another Movie</a>
+    <br />
+    <a asp-controller="Home" asp-action="MovieList">View the collection</a>
+</div>
