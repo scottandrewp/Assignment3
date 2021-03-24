@@ -12,10 +12,13 @@ namespace Assignment3.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private MovieDBContext Context;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, MovieDBContext con)
         {
             _logger = logger;
+            Context = con;
         }
 
         public IActionResult Index()
@@ -44,7 +47,7 @@ namespace Assignment3.Controllers
             if (ModelState.IsValid)// This ensures that invalid inputs don't get added to the list #Notcoveredinthevideos!
             {
                 Models.MovieList.AddMovie(movie);
-                return View("Confirmation", movie); // passed in the model to let user know that the movie was added successfully
+                return View("Confirmation", movie); // passed in the model to let user know that the movie was added successfully 
             }
             
             return View();

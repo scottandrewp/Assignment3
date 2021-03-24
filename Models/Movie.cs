@@ -8,6 +8,10 @@ namespace Assignment3.Models
 {
     public class Movie
     {
+        [Key]
+        [Required]
+        public int MovieID { get; set; }
+
         [Required]
         public string Category { get; set; } // Created getters and setters
 
